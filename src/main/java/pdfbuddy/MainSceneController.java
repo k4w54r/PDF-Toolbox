@@ -34,7 +34,7 @@ public class MainSceneController implements Initializable {
         Parent temp = FXMLLoader.load(getClass().getResource("/fxml/SingleImageScene.fxml"));
 
         Scene scene = new Scene(temp);
-        scene.getStylesheets().add("/styles/Styles.css");
+        //scene.getStylesheets().add("/styles/Styles.css");
         Stage primaryStage = (Stage)((Node)event.getSource()).getScene().getWindow();
         Stage newWindow = new Stage();
         newWindow.setTitle("Single OCR");
@@ -53,14 +53,13 @@ public class MainSceneController implements Initializable {
         newWindow.show();
     }
     @FXML
-    public void singlePDFOCRClicked(ActionEvent event) throws IOException {
-        Parent temp = FXMLLoader.load(getClass().getResource("/fxml/SinglePDFScene.fxml"));
+    public void extractImagesFromPDFClicked(ActionEvent event) throws IOException {
+        Parent temp = FXMLLoader.load(getClass().getResource("/fxml/ExtractImagesFromPDFScene.fxml"));
 
         Scene scene = new Scene(temp);
-        scene.getStylesheets().add("/styles/Styles.css");
         Stage primaryStage = (Stage)((Node)event.getSource()).getScene().getWindow();
         Stage newWindow = new Stage();
-        newWindow.setTitle("Single OCR");
+        newWindow.setTitle("Extract Images From PDF");
         newWindow.setScene(scene);
 
         // Specifies the modality for new window.
@@ -80,7 +79,6 @@ public class MainSceneController implements Initializable {
 
         Scene scene = new Scene(temp);
 
-        scene.getStylesheets().add("/styles/Styles.css");
         Stage primaryStage = (Stage)((Node)event.getSource()).getScene().getWindow();
         final Stage newWindow = new Stage();
         newWindow.setTitle("Bulk OCR");
@@ -122,7 +120,6 @@ public class MainSceneController implements Initializable {
         Parent temp = FXMLLoader.load(getClass().getResource("/fxml/BulkPDFDialog.fxml"));
 
         Scene scene = new Scene(temp);
-        scene.getStylesheets().add("/styles/Styles.css");
         Stage primaryStage = (Stage)((Node)event.getSource()).getScene().getWindow();
         Stage newWindow = new Stage();
         newWindow.setTitle("Bulk OCR");
