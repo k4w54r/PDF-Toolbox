@@ -2,7 +2,6 @@
 
 <?import com.jfoenix.controls.JFXButton?>
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ProgressBar?>
 <?import javafx.scene.control.TextField?>
@@ -14,7 +13,7 @@
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="261.0" prefWidth="767.0" style="-fx-background-color: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pdfbuddy.ExtractImagesFromPDFSceneController">
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="261.0" prefWidth="767.0" style="-fx-background-color: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pdfbuddy.ExtractPagesFromPDFSceneController">
     <columnConstraints>
         <ColumnConstraints hgrow="SOMETIMES" maxWidth="255.0" minWidth="10.0" prefWidth="154.6" />
         <ColumnConstraints hgrow="SOMETIMES" maxWidth="511.0" minWidth="10.0" prefWidth="411.9999633789063" />
@@ -24,7 +23,6 @@
       <RowConstraints />
         <RowConstraints />
         <RowConstraints maxHeight="75.0" minHeight="10.0" prefHeight="75.0" vgrow="SOMETIMES" />
-      <RowConstraints maxHeight="75.0" minHeight="10.0" prefHeight="75.0" vgrow="SOMETIMES" />
       <RowConstraints maxHeight="75.0" minHeight="10.0" prefHeight="75.0" vgrow="SOMETIMES" />
       <RowConstraints maxHeight="75.0" minHeight="10.0" prefHeight="75.0" vgrow="SOMETIMES" />
       <RowConstraints maxHeight="75.0" minHeight="10.0" prefHeight="75.0" vgrow="SOMETIMES" />
@@ -51,7 +49,7 @@
          <font>
             <Font size="18.0" />
          </font></TextField>
-      <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.columnIndex="2" GridPane.rowIndex="6">
+      <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.columnIndex="2" GridPane.rowIndex="5">
          <children>
             <JFXButton buttonType="RAISED" onAction="#runClicked" prefHeight="40.0" prefWidth="70.0" ripplerFill="WHITE" style="-fx-background-color: orange; -fx-background-radius: 1em;" text="Run" />
             <JFXButton buttonType="RAISED" onAction="#cancelClicked" prefHeight="40.0" prefWidth="70.0" ripplerFill="WHITE" style="-fx-background-color: orange; -fx-background-radius: 1em;" text="Cancel" />
@@ -123,23 +121,9 @@
             </LinearGradient>
          </textFill>
       </Label>
-      <ComboBox fx:id="selectOutputFormat" maxWidth="-Infinity" onAction="#outputFormatSelected" prefHeight="31.0" prefWidth="115.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-      <Label alignment="BASELINE_CENTER" contentDisplay="CENTER" text="Output Format:" textAlignment="CENTER" GridPane.rowIndex="5">
-         <font>
-            <Font name="Book Antiqua" size="20.0" />
-         </font>
-         <textFill>
-            <LinearGradient endX="1.0" endY="0.7938931306809869" startX="1.0" startY="1.0">
-               <stops>
-                  <Stop color="BLACK" />
-                  <Stop color="WHITE" offset="1.0" />
-               </stops>
-            </LinearGradient>
-         </textFill>
-      </Label>
       <JFXButton buttonType="RAISED" onAction="#selectOFClicked" prefHeight="26.0" prefWidth="38.0" ripplerFill="WHITE" style="-fx-background-color: orange; -fx-background-radius: 1em;" text="..." GridPane.columnIndex="2" GridPane.rowIndex="3" />
       <JFXButton buttonType="RAISED" onAction="#selectPDFClicked" prefHeight="26.0" prefWidth="38.0" ripplerFill="WHITE" style="-fx-background-color: orange; -fx-background-radius: 1em;" text="..." GridPane.columnIndex="2" GridPane.rowIndex="2" />
-      <Label fx:id="progress" alignment="BASELINE_CENTER" contentDisplay="CENTER" text="Progress:" textAlignment="CENTER" GridPane.rowIndex="6">
+      <Label fx:id="progress" alignment="BASELINE_CENTER" contentDisplay="CENTER" text="Progress:" textAlignment="CENTER" GridPane.rowIndex="5">
          <font>
             <Font name="Book Antiqua" size="20.0" />
          </font>
@@ -161,7 +145,7 @@
             </Label>
          </children>
       </HBox>
-      <ProgressBar fx:id="progressBar" prefHeight="30.0" prefWidth="421.0" progress="0.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+      <ProgressBar fx:id="progressBar" prefHeight="30.0" prefWidth="421.0" progress="0.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
     </children>
     <padding>
         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />

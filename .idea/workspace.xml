@@ -4,7 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="304cd041-af6f-4ff1-95a7-ad520a7ac6af" name="Default Changelist" comment="" />
+    <list default="true" id="304cd041-af6f-4ff1-95a7-ad520a7ac6af" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pdfbuddy/ExtractImagesFromPDFSceneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pdfbuddy/ExtractImagesFromPDFSceneController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pdfbuddy/MainSceneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pdfbuddy/MainSceneController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/ExtractImagesFromPDFScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/ExtractImagesFromPDFScene.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/MainScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/MainScene.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tessdata/ben.traineddata" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tessdata/eng.traineddata" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fxml/ExtractImagesFromPDFScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml/ExtractImagesFromPDFScene.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fxml/MainScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml/MainScene.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pdfbuddy/ExtractImagesFromPDFSceneController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pdfbuddy/ExtractImagesFromPDFSceneController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pdfbuddy/MainSceneController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pdfbuddy/MainSceneController$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pdfbuddy/MainSceneController$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pdfbuddy/MainSceneController$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pdfbuddy/MainSceneController$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pdfbuddy/MainSceneController$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pdfbuddy/MainSceneController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pdfbuddy/MainSceneController.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,7 +33,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1UX6JWhTJrdRcZ98nhGgTd1CxyX" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -43,11 +58,12 @@
       <recent name="D:\MyOCR\src\main\java\net\sourceforge\tess4j\util\PdfGsUtilities" />
       <recent name="D:\MyOCR\src\main\java\com\kcompany\myocr" />
     </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.kcompany.myocr" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\MyOCR\src\main\java\net\sourceforge\test4j" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="pdfbuddy" />
+      <recent name="com.kcompany.myocr" />
     </key>
   </component>
   <component name="RunManager" selected="Application.MainApp (1)">
@@ -125,6 +141,9 @@
     <servers />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/PDFBuddy$MainApp__1_.ic" NAME="MainApp (1) Coverage Results" MODIFIED="1609260473852" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>pdfbuddy.*</FILTER>
+    </SUITE>
     <SUITE FILE_PATH="coverage/Maven_built$MainApp.ic" NAME="MainApp Coverage Results" MODIFIED="1591638725022" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.kcompany.myocr.*</FILTER>
     </SUITE>

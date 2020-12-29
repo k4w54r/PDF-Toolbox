@@ -1,18 +1,18 @@
 package pdfbuddy;
 
-import com.jfoenix.controls.JFXProgressBar;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.concurrent.Task;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.*;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.stage.DirectoryChooser;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
+import org.apache.pdfbox.multipdf.Splitter;
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.rendering.ImageType;
 import org.apache.pdfbox.rendering.PDFRenderer;
@@ -23,25 +23,20 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
-import java.util.Locale;
+import java.util.List;
 import java.util.ResourceBundle;
 
-public class ExtractImagesFromPDFSceneController implements Initializable {
+public class ExtractPagesFromPDFSceneController implements Initializable {
 
 
     @FXML
     private String inputPDFPath;
     private String outputFolderPath;
     boolean stopper;
-    String fileExtension;
     File selectedFile;
     PDDocument document;
     Stage stage;
 
-    @FXML
-    private ComboBox<String> selectOutputFormat;
-    ObservableList<String> outputFormatList = FXCollections.observableArrayList("JPEG", "PNG");
-    private String outputFormat;
 
     @FXML
     private TextField pdfField, outputFolderField, fromField, toField;
@@ -55,10 +50,6 @@ public class ExtractImagesFromPDFSceneController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        selectOutputFormat.setItems(outputFormatList);
-        selectOutputFormat.setValue("JPEG");
-        outputFormat = selectOutputFormat.getValue();
-        fileExtension = ".jpg";
         stopper=true;
         progress.setVisible(false);
         progressBar.setVisible(false);
@@ -66,8 +57,6 @@ public class ExtractImagesFromPDFSceneController implements Initializable {
 
     @FXML
     public void outputFormatSelected(ActionEvent event) {
-        outputFormat = selectOutputFormat.getValue();
-        System.out.println(outputFormat);
     }
 
 
@@ -135,21 +124,17 @@ public class ExtractImagesFromPDFSceneController implements Initializable {
                 @Override
                 protected Void call() throws Exception {
                     document = PDDocument.load(selectedFile);
-                    PDFRenderer pdfRenderer = new PDFRenderer(document);
-                    int dpi = 300;
+                    Splitter splitter = new Splitter();
+                    List<PDDocument> Pages = splitter.split(document);
                     int pageNumber = Integer.parseInt(fromField.getText());
                     int limit = Integer.parseInt(toField.getText());
-                    if(outputFormat=="JPEG")
-                        fileExtension=".jpg";
-                    else if(outputFormat=="PNG")
-                        fileExtension=".png";
                     for (int i = pageNumber-1; i < limit; ++i) {
                         if (stopper) {
                             break;
                         }
-                        File outputImageFile = new File(outputFolderPath + "/" + pageNumber + fileExtension);
-                        BufferedImage bImage = pdfRenderer.renderImageWithDPI(i, dpi, ImageType.RGB);
-                        ImageIO.write(bImage, outputFormat, outputImageFile);
+                        PDDocument pd = Pages.get(i);
+                        pd.save(outputFolderPath + "/" + pageNumber +".pdf");
+                        pd.close();
                         System.out.println("I am Performing: " + pageNumber);
                         pageNumber++;
                         updateProgress(i,limit-1);
