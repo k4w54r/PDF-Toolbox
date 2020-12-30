@@ -96,6 +96,50 @@ public class MainSceneController implements Initializable {
 
         newWindow.show();
     }
+    @FXML
+    public void cutPagesFromPDFClicked(ActionEvent event) throws IOException {
+        Parent temp = FXMLLoader.load(getClass().getResource("/fxml/CutPagesFromPDFScene.fxml"));
+
+        Scene scene = new Scene(temp);
+        Stage primaryStage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        Stage newWindow = new Stage();
+        newWindow.setTitle("Cut Pages From PDF");
+        newWindow.setScene(scene);
+
+        // Specifies the modality for new window.
+        newWindow.initModality(Modality.WINDOW_MODAL);
+        newWindow.initStyle(StageStyle.UNDECORATED);
+        // Specifies the owner Window (parent) for new window
+        newWindow.initOwner(primaryStage);
+
+        // Set position of second window, related to primary window.
+        //newWindow.setX(primaryStage.getX() + 200);
+        //newWindow.setY(primaryStage.getY() + 100);
+
+        newWindow.show();
+    }
+    @FXML
+    public void mergePDFsClicked(ActionEvent event) throws IOException {
+        Parent temp = FXMLLoader.load(getClass().getResource("/fxml/MergePDFsScene.fxml"));
+
+        Scene scene = new Scene(temp);
+        Stage primaryStage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        Stage newWindow = new Stage();
+        newWindow.setTitle("Cut Pages From PDF");
+        newWindow.setScene(scene);
+
+        // Specifies the modality for new window.
+        newWindow.initModality(Modality.WINDOW_MODAL);
+        newWindow.initStyle(StageStyle.UNDECORATED);
+        // Specifies the owner Window (parent) for new window
+        newWindow.initOwner(primaryStage);
+
+        // Set position of second window, related to primary window.
+        //newWindow.setX(primaryStage.getX() + 200);
+        //newWindow.setY(primaryStage.getY() + 100);
+
+        newWindow.show();
+    }
     public void bulkImageOCRClicked(ActionEvent event) throws IOException {
         Parent temp = FXMLLoader.load(getClass().getResource("/fxml/BulkImageDialog.fxml"));
 
