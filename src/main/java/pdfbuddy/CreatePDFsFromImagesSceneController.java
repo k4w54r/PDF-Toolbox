@@ -46,7 +46,7 @@ public class CreatePDFsFromImagesSceneController implements Initializable {
     private String saveAs;
 
     @FXML
-    private TextField imagesField, outputFolderField, fromField, toField;
+    private TextField imagesField, outputFolderField;
 
     @FXML
     private Label progress;
@@ -204,8 +204,6 @@ public class CreatePDFsFromImagesSceneController implements Initializable {
         inputImages = null;
         outputFolderField.setText(null);
         outputFolderPath = null;
-        fromField.setText(null);
-        toField.setText(null);
     }
 
     @FXML

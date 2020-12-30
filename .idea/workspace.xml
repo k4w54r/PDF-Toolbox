@@ -7,6 +7,10 @@
     <list default="true" id="304cd041-af6f-4ff1-95a7-ad520a7ac6af" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_itextpdf_itextpdf_5_5_9.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/pdfbuddy/CreatePDFsFromImagesSceneController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/fxml/CreatePDFsFromImagesScene.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/fxml/CreatePDFsFromImagesScene.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/pdfbuddy/CreatePDFsFromImagesSceneController$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/pdfbuddy/CreatePDFsFromImagesSceneController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PDFBuddy.iml" beforeDir="false" afterPath="$PROJECT_DIR$/PDFBuddy.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
@@ -14,32 +18,22 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/pdfbuddy/CutPagesFromPDFSceneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pdfbuddy/RemovePagesFromPDFSceneController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pdfbuddy/ExtractPagesFromPDFSceneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pdfbuddy/ExtractPagesFromPDFSceneController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pdfbuddy/MainSceneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pdfbuddy/MainSceneController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/CutPagesFromPDFScene.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/CutPagesFromPDFScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/RemovePagesFromPDFScene.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/ExtractImagesFromPDFScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/ExtractImagesFromPDFScene.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/ExtractPagesFromPDFScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/ExtractPagesFromPDFScene.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/MainScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/MainScene.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fonts/NikoshBAN.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fonts/SolaimanLipi.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fonts/kalpurush.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fxml/CutPagesFromPDFScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/RemovePagesFromPDFScene.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fxml/ExtractImagesFromPDFScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/CreatePDFsFromImagesScene.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fxml/ExtractPagesFromPDFScene.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fxml/MainScene.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fxml/MergePDFsScene.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pdfbuddy/CutPagesFromPDFSceneController$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pdfbuddy/CutPagesFromPDFSceneController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pdfbuddy/ExtractImagesFromPDFSceneController$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pdfbuddy/ExtractImagesFromPDFSceneController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pdfbuddy/ExtractPagesFromPDFSceneController$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pdfbuddy/ExtractPagesFromPDFSceneController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pdfbuddy/MainApp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fxml/CutPagesFromPDFScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml/RemovePagesFromPDFScene.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fxml/ExtractImagesFromPDFScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml/ExtractImagesFromPDFScene.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fxml/ExtractPagesFromPDFScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml/ExtractPagesFromPDFScene.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fxml/MainScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml/MainScene.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pdfbuddy/CutPagesFromPDFSceneController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pdfbuddy/RemovePagesFromPDFSceneController$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pdfbuddy/CutPagesFromPDFSceneController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pdfbuddy/RemovePagesFromPDFSceneController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pdfbuddy/ExtractPagesFromPDFSceneController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pdfbuddy/ExtractPagesFromPDFSceneController$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pdfbuddy/ExtractPagesFromPDFSceneController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pdfbuddy/ExtractPagesFromPDFSceneController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/pdfbuddy/MainSceneController$1.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/pdfbuddy/MainSceneController$2.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/pdfbuddy/MainSceneController$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pdfbuddy/MainSceneController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pdfbuddy/MergePDFsSceneController$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pdfbuddy/MergePDFsSceneController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/styles/Styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pdfbuddy/MainSceneController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pdfbuddy/MainSceneController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
