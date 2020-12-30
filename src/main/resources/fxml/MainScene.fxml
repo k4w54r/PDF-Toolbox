@@ -13,14 +13,11 @@
 			<children>
 				<AnchorPane layoutX="327.0" layoutY="35.0" maxWidth="427.0" prefHeight="484.0" prefWidth="427.0" style="-fx-background-color: white; -fx-background-radius: 1em;" AnchorPane.bottomAnchor="37.0" AnchorPane.leftAnchor="327.0" AnchorPane.rightAnchor="3.0" AnchorPane.topAnchor="35.0">
 					<children>
-						<JFXButton buttonType="RAISED" layoutX="345.0" layoutY="78.0" prefHeight="40.0" prefWidth="211.0" ripplerFill="WHITE" style="-fx-background-color: orange; -fx-background-radius: 1em;" text="Create PDF(s) From Image(s)" />
-                  <JFXButton buttonType="RAISED" layoutX="73.0" layoutY="78.0" prefHeight="40.0" prefWidth="211.0" ripplerFill="WHITE" style="-fx-background-color: orange; -fx-background-radius: 1em;" text="Create A Single PDF From Image(s)" />
-                  <JFXButton buttonType="RAISED" layoutX="345.0" layoutY="322.0" onAction="#extractImagesFromPDFClicked" prefHeight="40.0" prefWidth="211.0" ripplerFill="WHITE" style="-fx-background-color: orange; -fx-background-radius: 1em;" text="Extract Images From PDF" />
-                  <JFXButton buttonType="RAISED" layoutX="73.0" layoutY="322.0" onAction="#extractPagesFromPDFClicked" prefHeight="40.0" prefWidth="211.0" ripplerFill="WHITE" style="-fx-background-color: orange; -fx-background-radius: 1em;" text="Extract Pages From PDF" />
-                  <JFXButton buttonType="RAISED" layoutX="73.0" layoutY="243.0" onAction="#cutPagesFromPDFClicked" prefHeight="40.0" prefWidth="211.0" ripplerFill="WHITE" style="-fx-background-color: orange; -fx-background-radius: 1em;" text="Cut Pages From PDF" />
-                  <JFXButton buttonType="RAISED" layoutX="345.0" layoutY="159.0" prefHeight="40.0" prefWidth="211.0" ripplerFill="WHITE" style="-fx-background-color: orange; -fx-background-radius: 1em;" text="Create PDF(s) From Text File(s)" />
-                  <JFXButton buttonType="RAISED" layoutX="73.0" layoutY="159.0" prefHeight="40.0" prefWidth="211.0" ripplerFill="WHITE" style="-fx-background-color: orange; -fx-background-radius: 1em;" text="Create A Single PDF From Text File(s)" />
-                  <JFXButton buttonType="RAISED" layoutX="345.0" layoutY="243.0" onAction="#mergePDFsClicked" prefHeight="40.0" prefWidth="211.0" ripplerFill="WHITE" style="-fx-background-color: orange; -fx-background-radius: 1em;" text="Merge PDFs" />
+						<JFXButton buttonType="RAISED" layoutX="202.0" layoutY="81.0" onAction="#createPDFsFromImagesClicked" prefHeight="40.0" prefWidth="257.0" ripplerFill="WHITE" style="-fx-background-color: orange; -fx-background-radius: 1em;" text="Create PDF(s) From Image(s)" />
+                  <JFXButton buttonType="RAISED" layoutX="202.0" layoutY="143.0" onAction="#extractImagesFromPDFClicked" prefHeight="40.0" prefWidth="258.0" ripplerFill="WHITE" style="-fx-background-color: orange; -fx-background-radius: 1em;" text="Extract Images From PDF" />
+                  <JFXButton buttonType="RAISED" layoutX="202.0" layoutY="328.0" onAction="#extractPagesFromPDFClicked" prefHeight="40.0" prefWidth="258.0" ripplerFill="WHITE" style="-fx-background-color: orange; -fx-background-radius: 1em;" text="Extract Pages From PDF" />
+                  <JFXButton buttonType="RAISED" layoutX="202.0" layoutY="264.0" onAction="#removePagesFromPDFClicked" prefHeight="40.0" prefWidth="258.0" ripplerFill="WHITE" style="-fx-background-color: orange; -fx-background-radius: 1em;" text="Remove Pages From PDF" />
+                  <JFXButton buttonType="RAISED" layoutX="202.0" layoutY="203.0" onAction="#mergePDFsClicked" prefHeight="40.0" prefWidth="258.0" ripplerFill="WHITE" style="-fx-background-color: orange; -fx-background-radius: 1em;" text="Merge PDFs" />
 					</children>
                <effect>
                   <DropShadow />

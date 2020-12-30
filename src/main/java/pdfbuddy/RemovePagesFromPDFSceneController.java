@@ -21,7 +21,7 @@ import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
 
-public class CutPagesFromPDFSceneController implements Initializable {
+public class RemovePagesFromPDFSceneController implements Initializable {
 
 
     @FXML

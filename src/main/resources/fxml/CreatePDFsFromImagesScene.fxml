@@ -14,11 +14,11 @@
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="315.0" prefWidth="765.0" style="-fx-background-color: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pdfbuddy.ExtractPagesFromPDFSceneController">
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="324.0" prefWidth="795.0" style="-fx-background-color: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pdfbuddy.CreatePDFsFromImagesSceneController">
     <columnConstraints>
         <ColumnConstraints hgrow="SOMETIMES" maxWidth="255.0" minWidth="10.0" prefWidth="154.6" />
-        <ColumnConstraints hgrow="SOMETIMES" maxWidth="511.0" minWidth="10.0" prefWidth="411.9999633789063" />
-        <ColumnConstraints hgrow="SOMETIMES" maxWidth="171.0" minWidth="10.0" prefWidth="153.60003662109375" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="511.0" minWidth="10.0" prefWidth="455.20001220703125" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="171.0" minWidth="10.0" prefWidth="127.19998779296873" />
     </columnConstraints>
     <rowConstraints>
       <RowConstraints />
@@ -27,10 +27,9 @@
       <RowConstraints maxHeight="75.0" minHeight="10.0" prefHeight="75.0" vgrow="SOMETIMES" />
       <RowConstraints maxHeight="75.0" minHeight="10.0" prefHeight="75.0" vgrow="SOMETIMES" />
       <RowConstraints maxHeight="75.0" minHeight="10.0" prefHeight="75.0" vgrow="SOMETIMES" />
-      <RowConstraints maxHeight="75.0" minHeight="10.0" prefHeight="75.0" vgrow="SOMETIMES" />
     </rowConstraints>
     <children>
-        <Label alignment="BASELINE_CENTER" contentDisplay="CENTER" text="PDF:" textAlignment="CENTER" GridPane.rowIndex="2">
+        <Label alignment="BASELINE_CENTER" contentDisplay="CENTER" text="Select Image(s):" textAlignment="CENTER" GridPane.rowIndex="2">
          <font>
             <Font name="Book Antiqua" size="20.0" />
          </font>
@@ -42,7 +41,7 @@
                </stops>
             </LinearGradient>
          </textFill></Label>
-        <TextField fx:id="pdfField" prefHeight="36.0" prefWidth="457.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+        <TextField fx:id="imagesField" prefHeight="36.0" prefWidth="457.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
          <font>
             <Font size="18.0" />
          </font>
@@ -51,52 +50,12 @@
          <font>
             <Font size="18.0" />
          </font></TextField>
-      <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.columnIndex="2" GridPane.rowIndex="6">
+      <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.columnIndex="2" GridPane.rowIndex="5">
          <children>
             <JFXButton buttonType="RAISED" onAction="#runClicked" prefHeight="40.0" prefWidth="70.0" ripplerFill="WHITE" style="-fx-background-color: orange; -fx-background-radius: 1em;" text="Run" />
             <JFXButton buttonType="RAISED" onAction="#cancelClicked" prefHeight="40.0" prefWidth="70.0" ripplerFill="WHITE" style="-fx-background-color: orange; -fx-background-radius: 1em;" text="Cancel" />
          </children>
       </HBox>
-      <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
-         <children>
-            <Label alignment="BASELINE_CENTER" contentDisplay="CENTER" prefHeight="26.0" prefWidth="59.0" text="From" textAlignment="CENTER">
-               <font>
-                  <Font name="Book Antiqua" size="20.0" />
-               </font>
-               <textFill>
-                  <LinearGradient endX="1.0" endY="0.7938931306809869" startX="1.0" startY="1.0">
-                     <stops>
-                        <Stop color="BLACK" />
-                        <Stop color="WHITE" offset="1.0" />
-                     </stops>
-                  </LinearGradient>
-               </textFill>
-            </Label>
-            <TextField fx:id="fromField" prefHeight="39.0" prefWidth="63.0">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </TextField>
-            <Label alignment="BASELINE_CENTER" contentDisplay="CENTER" prefHeight="26.0" prefWidth="40.0" text="To" textAlignment="CENTER">
-               <font>
-                  <Font name="Book Antiqua" size="20.0" />
-               </font>
-               <textFill>
-                  <LinearGradient endX="1.0" endY="0.7938931306809869" startX="1.0" startY="1.0">
-                     <stops>
-                        <Stop color="BLACK" />
-                        <Stop color="WHITE" offset="1.0" />
-                     </stops>
-                  </LinearGradient>
-               </textFill>
-            </Label>
-            <TextField fx:id="toField" prefHeight="39.0" prefWidth="63.0">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </TextField>
-            <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" spacing="10.0" />
-         </children></HBox>
       <Label alignment="BASELINE_CENTER" contentDisplay="CENTER" text="Output Folder:" textAlignment="CENTER" GridPane.rowIndex="3">
          <font>
             <Font name="Book Antiqua" size="20.0" />
@@ -110,22 +69,9 @@
             </LinearGradient>
          </textFill>
       </Label>
-      <Label alignment="BASELINE_CENTER" contentDisplay="CENTER" text="Page Range:" textAlignment="CENTER" GridPane.rowIndex="4">
-         <font>
-            <Font name="Book Antiqua" size="20.0" />
-         </font>
-         <textFill>
-            <LinearGradient endX="1.0" endY="0.7938931306809869" startX="1.0" startY="1.0">
-               <stops>
-                  <Stop color="BLACK" />
-                  <Stop color="WHITE" offset="1.0" />
-               </stops>
-            </LinearGradient>
-         </textFill>
-      </Label>
       <JFXButton buttonType="RAISED" onAction="#selectOFClicked" prefHeight="26.0" prefWidth="38.0" ripplerFill="WHITE" style="-fx-background-color: orange; -fx-background-radius: 1em;" text="..." GridPane.columnIndex="2" GridPane.rowIndex="3" />
-      <JFXButton buttonType="RAISED" onAction="#selectPDFClicked" prefHeight="26.0" prefWidth="38.0" ripplerFill="WHITE" style="-fx-background-color: orange; -fx-background-radius: 1em;" text="..." GridPane.columnIndex="2" GridPane.rowIndex="2" />
-      <Label fx:id="progress" alignment="BASELINE_CENTER" contentDisplay="CENTER" text="Progress:" textAlignment="CENTER" GridPane.rowIndex="6">
+      <JFXButton buttonType="RAISED" onAction="#selectImagesClicked" prefHeight="26.0" prefWidth="38.0" ripplerFill="WHITE" style="-fx-background-color: orange; -fx-background-radius: 1em;" text="..." GridPane.columnIndex="2" GridPane.rowIndex="2" />
+      <Label fx:id="progress" alignment="BASELINE_CENTER" contentDisplay="CENTER" text="Progress:" textAlignment="CENTER" GridPane.rowIndex="5">
          <font>
             <Font name="Book Antiqua" size="20.0" />
          </font>
@@ -147,8 +93,8 @@
             </Label>
          </children>
       </HBox>
-      <ProgressBar fx:id="progressBar" prefHeight="30.0" prefWidth="421.0" progress="0.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
-      <Label alignment="BASELINE_CENTER" contentDisplay="CENTER" text="Save As:" textAlignment="CENTER" GridPane.rowIndex="5">
+      <ProgressBar fx:id="progressBar" prefHeight="30.0" prefWidth="421.0" progress="0.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+      <Label alignment="BASELINE_CENTER" contentDisplay="CENTER" text="Save As:" textAlignment="CENTER" GridPane.rowIndex="4">
          <font>
             <Font name="Book Antiqua" size="20.0" />
          </font>
@@ -161,8 +107,8 @@
             </LinearGradient>
          </textFill>
       </Label>
-      <ComboBox fx:id="selectSaveAs" maxWidth="-Infinity" onAction="#saveAsSelected" prefHeight="31.0" prefWidth="144.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-      <Label alignment="BASELINE_CENTER" contentDisplay="CENTER" prefHeight="26.0" prefWidth="426.0" text="Extract Pages From PDF" textAlignment="CENTER" textFill="ORANGE" GridPane.columnIndex="1">
+      <ComboBox fx:id="selectSaveAs" maxWidth="-Infinity" onAction="#saveAsSelected" prefHeight="31.0" prefWidth="144.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+      <Label alignment="BASELINE_CENTER" contentDisplay="CENTER" prefHeight="36.0" prefWidth="530.0" text="Create PDF(s) From Image(s)" textAlignment="CENTER" textFill="ORANGE" GridPane.columnIndex="1">
          <font>
             <Font name="Cooper Black" size="31.0" />
          </font>
