@@ -1,4 +1,4 @@
-package pdfbuddy;
+package pdftoolbox;
 
 import javafx.concurrent.Task;
 import javafx.event.ActionEvent;
@@ -11,8 +11,7 @@ import javafx.scene.control.TextField;
 import javafx.stage.DirectoryChooser;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
-import org.apache.pdfbox.multipdf.Splitter;
-import org.apache.pdfbox.pdmodel.PDDocument;
+import org.apache.pdfbox.multipdf.PDFMergerUtility;
 
 import java.awt.*;
 import java.io.File;
@@ -21,20 +20,19 @@ import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
 
-public class RemovePagesFromPDFSceneController implements Initializable {
+public class MergePDFsSceneController implements Initializable {
 
 
     @FXML
-    private String inputPDFPath;
+    private String inputPDFs;
     private String outputFolderPath;
     boolean stopper;
-    File selectedFile;
-    PDDocument document;
+    List<File> selectedFiles;
     Stage stage;
 
 
     @FXML
-    private TextField pdfField, outputFolderField, fromField, toField;
+    private TextField pdfField, outputFolderField;
 
     @FXML
     private Label progress;
@@ -51,29 +49,22 @@ public class RemovePagesFromPDFSceneController implements Initializable {
     }
 
     @FXML
-    public void outputFormatSelected(ActionEvent event) {
-    }
-
-
-
-    @FXML
-    public void selectPDFClicked(ActionEvent event) throws IOException {
+    public void selectPDFsClicked(ActionEvent event) throws IOException {
         System.out.println("selectPDFClicked");
         FileChooser fileChooser = new FileChooser();
         fileChooser.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("PDF","*.pdf"));
-        selectedFile = fileChooser.showOpenDialog(null);
-        if(selectedFile!=null)
+        selectedFiles = fileChooser.showOpenMultipleDialog(null);
+        if(selectedFiles!=null && selectedFiles.size()>0)
         {
-            inputPDFPath = selectedFile.getAbsolutePath();
-            pdfField.setText(inputPDFPath);
-            document = PDDocument.load(selectedFile);
-            int numberOfPages = document.getNumberOfPages();
-            document.close();
-            fromField.setText("2");
-            toField.setText(String.valueOf(numberOfPages));
-            //fileName = selectedFile.getName();
-            System.out.println(inputPDFPath);
-            //System.out.println(fileName);
+            inputPDFs = "";
+            for(int i=0;i<selectedFiles.size();i++){
+                inputPDFs+= "\"" + selectedFiles.get(i).getName() + "\"" + " ";
+            }
+            for(int i=0;i<selectedFiles.size();i++){
+                System.out.println(selectedFiles.get(i).getName());
+            }
+            pdfField.setText(inputPDFs);
+            System.out.println(inputPDFs);
         }else{
             pdfField.setText(null);
         }
@@ -96,7 +87,7 @@ public class RemovePagesFromPDFSceneController implements Initializable {
     @FXML
     public void runClicked(ActionEvent event) throws IOException {
         System.out.println("runClicked");
-        if(inputPDFPath == null)
+        if(inputPDFs == null)
         {
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Error!");
@@ -118,34 +109,16 @@ public class RemovePagesFromPDFSceneController implements Initializable {
             Task<Void> task = new Task<Void>() {
                 @Override
                 protected Void call() throws Exception {
-                    document = PDDocument.load(selectedFile);
-                    int cutBegin = Integer.parseInt(fromField.getText());
-                    int cutEnd = Integer.parseInt(toField.getText());
-                    int numberOfPages = document.getNumberOfPages();
-                    PDDocument outputDocument = new PDDocument();
-                    for (int i =0; i < cutBegin-1; ++i) {
+                    PDFMergerUtility pdfMerger = new PDFMergerUtility();
+                    pdfMerger.setDestinationFileName(outputFolderPath + "/" + "merged_output.pdf");
+                    for(int i=0;i<selectedFiles.size();i++){
                         if (stopper) {
                             break;
                         }
-                        outputDocument.addPage(document.getPage(i));
+                        pdfMerger.addSource(selectedFiles.get(i));
+                        updateProgress(i,selectedFiles.size()-1);
                     }
-                    for (int i =cutEnd; i < numberOfPages-1; ++i) {
-                        if (stopper) {
-                            break;
-                        }
-                        outputDocument.addPage(document.getPage(i));
-
-                    }
-                    for(int j=1;j<numberOfPages;++j){
-                        if (stopper) {
-                            break;
-                        }
-                        updateProgress(j,numberOfPages-1);
-                    }
-
-                    outputDocument.save(outputFolderPath + "/" + selectedFile.getName().replace(".pdf", "") + "_output.pdf");
-                    document.close();
-                    outputDocument.close();
+                    pdfMerger.mergeDocuments(null);
                     Desktop.getDesktop().open(new File(outputFolderPath));
                     return null;
                 }
@@ -175,11 +148,9 @@ public class RemovePagesFromPDFSceneController implements Initializable {
         progress.setVisible(false);
         progressBar.setVisible(false);
         pdfField.setText(null);
-        inputPDFPath = null;
+        inputPDFs = null;
         outputFolderField.setText(null);
         outputFolderPath = null;
-        fromField.setText(null);
-        toField.setText(null);
     }
 
     @FXML

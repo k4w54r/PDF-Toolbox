@@ -1,4 +1,4 @@
-package pdfbuddy;
+package pdftoolbox;
 
 import javafx.application.Application;
 import static javafx.application.Application.launch;
@@ -17,7 +17,7 @@ public class MainApp extends Application {
         Scene scene = new Scene(root);
         //scene.getStylesheets().add("/styles/Styles.css");
         
-        stage.setTitle("PDFBuddy");
+        stage.setTitle("PDF Toolbox");
         stage.setScene(scene);
         stage.show();
     }

@@ -1,31 +1,35 @@
-package pdfbuddy;
+package pdftoolbox;
 
 
+import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
 import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.input.MouseEvent;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-import javafx.stage.WindowEvent;
 
 public class MainSceneController implements Initializable {
 
+    @FXML
+    private ImageView imageView;
     private double xOffset = 0;
     private double yOffset = 0;
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-
+        File file = new File("src/main/resources/images/logo.png");
+        Image image = new Image(file.toURI().toString());
+        imageView.setImage(image);
     }
     @FXML
     public void createPDFsFromImagesClicked(ActionEvent event) throws IOException {
