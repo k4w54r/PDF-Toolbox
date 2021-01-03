@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="304cd041-af6f-4ff1-95a7-ad520a7ac6af" name="Default Changelist" comment="" />
+    <list default="true" id="304cd041-af6f-4ff1-95a7-ad520a7ac6af" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pdftoolbox/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pdftoolbox/MainApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pdftoolbox/MainSceneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pdftoolbox/MainSceneController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/MainScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/MainScene.fxml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

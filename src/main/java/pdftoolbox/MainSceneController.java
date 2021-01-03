@@ -13,6 +13,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.Modality;
@@ -21,8 +22,10 @@ import javafx.stage.StageStyle;
 
 public class MainSceneController implements Initializable {
 
+    Stage stage;
     @FXML
-    private ImageView imageView;
+    public Label x;
+    public ImageView imageView;
     private double xOffset = 0;
     private double yOffset = 0;
     @Override
@@ -140,6 +143,12 @@ public class MainSceneController implements Initializable {
         //newWindow.setY(primaryStage.getY() + 100);
 
         newWindow.show();
+    }
+
+    @FXML
+    public void xClicked(){
+        stage = (Stage)x.getScene().getWindow();
+        stage.close();
     }
 
 }
