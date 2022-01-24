@@ -9,15 +9,10 @@
 <!-- TABLE OF CONTENTS -->
 <details open="open">
   <summary>Table of Contents</summary>
-  <ol>
-    <li>
-      <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#features">Features</a></li>
-      </ul>
-    </li>
-    <li><a href="#built-with">Built With</a></li>
-  </ol>
+     <ul>
+       <li><a href="#features">Features</a></li>
+       <li><a href="#built-with">Built With</a></li>
+     </ul>
 </details>
 
 <!-- Features -->
